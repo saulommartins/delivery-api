@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Auth::routes(['verify' => true]);
 
-Route::post('signin', 'ApiController@login');
+Route::post('signin', 'App\Http\Controllers\ApiController@login');
 Route::post('signup', 'ApiController@register');
 Route::post('check', 'ApiController@isAvailable');
 
