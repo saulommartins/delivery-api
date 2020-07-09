@@ -1,2 +1,3 @@
-web: vendor/bin/heroku-php-apache2 public/
+web: vendor/bin/heroku-php-nginx public/
+release: php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan migrate --force
 
